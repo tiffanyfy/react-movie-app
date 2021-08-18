@@ -1,0 +1,21 @@
+// Main Style Import File
+
+// Utilities
+@import './functions';
+@import './variables';
+@import './mixins';
+
+// Resets
+@import './reset';
+@import './type';
+
+// Components
+@import './body';
+@import './wrapper';
+@import './header';
+@import './nav';
+@import './section';
+@import './movies';
+@import './movie-card';
+@import './single-movie';
+@import './footer';
