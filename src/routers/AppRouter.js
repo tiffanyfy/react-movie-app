@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from '../components/Header';
+import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import PageHome from '../pages/PageHome';
 import PageAbout from '../pages/PageAbout';
@@ -12,6 +13,7 @@ function AppRouter() {
       <div className="App">
         <Header />
         <main>
+          <Banner />
           <Switch>
 
           </Switch>
