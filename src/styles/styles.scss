@@ -1,13 +1,11 @@
 // Main Style Import File
 
 // Utilities
-@import './functions';
 @import './variables';
 @import './mixins';
 
 // Resets
 @import './reset';
-@import './type';
 
 // Components
 @import './body';
