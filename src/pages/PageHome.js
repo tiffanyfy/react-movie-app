@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
+import NavSort from '../components/NavSort';
 import Movies from '../components/Movies';
 import { API_TOKEN } from '../globals/globals';
 
-function PageHome() {
+function PageHome({ sort }) {
 
     const [movieData, setMovieData] = useState(null);
 
@@ -33,6 +34,7 @@ function PageHome() {
 
     return (
         <div>
+            <NavSort />
             <Movies />
         </div>
     )
