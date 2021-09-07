@@ -3,6 +3,8 @@ import NavSort from '../components/NavSort';
 import Movies from '../components/Movies';
 import { API_TOKEN } from '../globals/globals';
 
+
+// TESTINGGGGGGGGGG
 function PageHome({ sort }) {
 
     const [movieData, setMovieData] = useState(null);
@@ -28,6 +30,7 @@ function PageHome({ sort }) {
             // save the data returned into a variable 
             setMovieData(rawMovieData);
         }
+
         fetchMovies();
     }, [sort]);
 
