@@ -4,7 +4,6 @@ import Movies from '../components/Movies';
 import { API_TOKEN } from '../globals/globals';
 
 
-// TESTINGGGGGGGGGG
 function PageHome({ sort }) {
 
     const [movieData, setMovieData] = useState(null);

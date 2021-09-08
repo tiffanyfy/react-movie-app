@@ -1,6 +1,22 @@
-function SingleMovie() {
+import noPoster from '../images/no-movie-poster.jpg';
+
+function SingleMovie({ movieObj }) {
     return (
-        <div>
+        <div className="single-movie">
+
+            {/* reference page for the path */}
+            {/* https://developers.themoviedb.org/3/getting-started/images */}
+            <div className="single-movie-container" style={{backgroundImage: movieObj.backdrop_path && `url(https://image.tmdb.org/t/p/original/${movieObj.backdrop_path})`}}>
+            </div>
+            <div className="single-movie-content">
+                <div className="single-movie-poster">
+                    {movieObj.poster_path === null? <img src={noPoster} alt="no poster image" /> : <img src={`https://image.tmdb.org/t/p/original${movieObj.poster_path}`} alt={movieObj.title} />}
+                </div>
+                <div className="single-movie-info">
+                    <h2>{movieObj.title}</h2>
+                    <p>{movieObj.overview}</p>
+                </div>
+            </div>
             
         </div>
     )
