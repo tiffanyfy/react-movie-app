@@ -13,7 +13,7 @@ function AppRouter() {
       <div className="App">
         <Header />
           <main>
-            <Banner />
+            {/* <Banner /> */}
             <Switch>
               <Route path="/" exact><PageHome sort='popular' /></Route>
               <Route path="/sort/popular"><PageHome sort='popular' /></Route>
