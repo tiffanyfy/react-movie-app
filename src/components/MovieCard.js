@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import noPoster from '../images/no-movie-poster.jpg';
+import addFavorite from '../images/add-favorite.svg';
 
 function MovieCard({ movieObj }) {
     return (
@@ -18,6 +19,10 @@ function MovieCard({ movieObj }) {
                 <p>{movieObj.popularity}</p>
                 <p>{movieObj.overview}</p>
                 <Link to={`/movie/${movieObj.id}`}>More Info</Link>
+                <div className="favorite-icon">
+                    {/* Placeholder code, will need to modify to add/remove favs */}
+                    <img src={addFavorite} alt="Add movie to favorites" />
+                </div>
             </div>
         </div>
     )
