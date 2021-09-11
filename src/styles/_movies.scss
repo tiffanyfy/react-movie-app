@@ -5,6 +5,11 @@
 
 // @media (min-width: map-get($breakpoint, desktop)) {}
 
+// banner
+.banner-container{
+    width: 100%;
+}
+
 .movie-posters {
 
     padding: em(16);

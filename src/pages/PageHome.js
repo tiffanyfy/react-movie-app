@@ -38,39 +38,27 @@ function PageHome({ sort }) {
 
 
     // Banner
-
     useEffect(() => {
-        const fetchBannerMovie = async() => {
-            const res = await fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`);
-            let bannerMovieData = await res.json();
-            bannerMovieData = bannerMovieData.results.splice(0, 12);
-            setMovieDataBanner(bannerMovieData);            
+        const fetchPopulrMovies = async() => {
+            const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
+
+            let popularMovieData = await res.json();
+
+            popularMovieData = popularMovieData.results.splice(0, 10);
+
+            setMovieDataBanner(popularMovieData);
+            
+            console.log(movieDataBanner);
         }
-        console.log(movieDataBanner)
-    })
-
-    // function fetchTrendMovie() {
-    //     const response = await fetch(`https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`, {
-    //             headers: {
-    //                 'Accept': 'application/json',
-    //                 'Content-Type': 'application/json',
-    //                 'Authorization': 'Bearer '+ API_TOKEN 
-    //             }
-
-    //         });
-    //         let bannerMovieData = await res.json();
-
-    //         bannerMovieData = bannerMovieData.results[0];
-    //         setMovieDataBanner(bannerMovieData);
-    // }
-    // fetchTrendMovie();
+        fetchPopulrMovies();
+    }, [])
 
 
 
     return (
         <div>
             <NavSort />
-            <Banner movieObj = {movieData} />
+            <Banner movieObj = {movieDataBanner} />
             <Movies />
         </div>
     )
