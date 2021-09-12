@@ -17,8 +17,7 @@ function MovieCard({ movieObj }) {
             <div className="movie-info">
                 <h3>{movieObj.title}</h3>
                 <p>{movieObj.release_date}</p>
-                {/* Will we need to change popularity to vote_average? */}
-                <p>{movieObj.popularity}</p>
+                <p>{movieObj.vote_average}</p>
                 <p>{movieObj.overview}</p>
                 <Link to={`/movie/${movieObj.id}`}>More Info</Link>
                 <div className="favorite-icon">
