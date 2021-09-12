@@ -1,5 +1,20 @@
 // Single Movie Component
 
+.single-movie-content{
+    img{
+        max-width: 100%;
+    }
+
+}
+.single-movie-info{
+    color: #fff;
+    margin: 1rem;
+    #single-movie-title{
+        font-size: 2rem;
+    }
+}
+
+
 // @media (min-width: map-get($breakpoint, tablet)) {}
 
 

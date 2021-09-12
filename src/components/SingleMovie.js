@@ -16,10 +16,10 @@ function SingleMovie({ movieObj }) {
                         {movieObj.poster_path === null? <img src={noPoster} alt="no poster image" /> : <img src={`https://image.tmdb.org/t/p/original${movieObj.poster_path}`} alt={movieObj.title} />}
                     </div>
                     <div className="single-movie-info">
-                        <h2>{movieObj.title}</h2>
+                        <h2 id="single-movie-title">{movieObj.title}</h2>
                         <img src={addFavorite} alt="add favorite" />
-                        <p>{movieObj.release_date}</p>
-                        <p>{movieObj.overview}</p>
+                        <p id="single-movie-release-date">{movieObj.release_date}</p>
+                        <p id="single-movie-overview">{movieObj.overview}</p>
                     </div>
                 </div>
             </div>
