@@ -1,20 +1,9 @@
-import poster from '../images/placeholder-poster.jpg';
+import MovieCard from './MovieCard';
 
-function Movies() {
+function Movies({movieData}) {
     return (
-        <div className="movie-posters">
-            <img src={poster} alt="" />
-            <img src={poster} alt="" />
-            <img src={poster} alt="" />
-            <img src={poster} alt="" />
-            <img src={poster} alt="" />
-            <img src={poster} alt="" />
-            <img src={poster} alt="" />
-            <img src={poster} alt="" />
-            <img src={poster} alt="" />
-            <img src={poster} alt="" />
-            <img src={poster} alt="" />
-            <img src={poster} alt="" />
+        <div className="movies-container">
+            {movieData.map((oneMovie, i) => <MovieCard key={i} movieObj={oneMovie} />)}
         </div>
     )
 }
