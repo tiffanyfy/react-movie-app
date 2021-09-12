@@ -59,7 +59,7 @@ function PageHome({ sort }) {
         <div>
             <NavSort />
             <Banner movieObj = {movieDataBanner} />
-            <Movies />
+            {movieData !== null && <Movies movieData={movieData} />}
         </div>
     )
 }
