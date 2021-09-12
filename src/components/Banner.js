@@ -19,9 +19,9 @@ function Banner( { movieObj, movieBannerLength } ) {
         // <div></div>
         <div className="banner-container">
             <img src={`https://image.tmdb.org/t/p/original/${movieDisplayed && movieDisplayed.backdrop_path}`} alt="placeholder" />
-            <div className="banner-container" >
+            <div className="banner-info-container" >
                 <h2 class="banner-title">{ movieDisplayed && movieDisplayed.title}</h2>
-                <h3 class="banner-release-date">{ movieDisplayed && movieDisplayed.release_date}</h3>
+                {/* <h3 class="banner-release-date">{ movieDisplayed && movieDisplayed.release_date}</h3> */}
                 <p class="banner-overview">{ movieDisplayed && movieDisplayed.overview}</p>
 
                 {/* path to the movie page (use movie id) */}
