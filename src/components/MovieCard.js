@@ -17,12 +17,13 @@ function MovieCard({ movieObj }) {
             <div className="movie-info">
                 <h3>{movieObj.title}</h3>
                 <p>{movieObj.release_date}</p>
+                {/* Will we need to change popularity to vote_average? */}
                 <p>{movieObj.popularity}</p>
                 <p>{movieObj.overview}</p>
                 <Link to={`/movie/${movieObj.id}`}>More Info</Link>
                 <div className="favorite-icon">
                     {/* Placeholder code, will need to modify to add/remove favs */}
-                    <img src={addFavorite} alt="Add movie to favorites" />
+                    <img src={addFavorite} alt="Heart icon" />
                 </div>
             </div>
         </div>
@@ -30,23 +31,4 @@ function MovieCard({ movieObj }) {
 }
 
 export default MovieCard;
-
-// import { Link } from 'react-router-dom';
-// import poster from '../images/placeholder-poster.jpg';
-
-// function MovieCard() {
-//     return (
-//         <div className="movie-card">
-//             <div className="movie-poster">
-//                 <img src={poster} alt="Godzilla vs Kong" />
-//             </div>
-//             <div className="movie">
-//                 <h3>Godzilla vs. Kong</h3>
-//                 <Link to="/">More Info</Link>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default MovieCard
 
