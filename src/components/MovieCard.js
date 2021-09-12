@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import noPoster from '../images/no-movie-poster.jpg';
-import addFavorite from '../images/add-favorite.svg';
+import addFavorite from '../images/add-favorite.png';
+import removeFavorite from '../images/remove-favorite.png';
 
 function MovieCard({ movieObj }) {
     return (
