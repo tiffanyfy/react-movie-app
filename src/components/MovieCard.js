@@ -30,3 +30,23 @@ function MovieCard({ movieObj }) {
 }
 
 export default MovieCard;
+
+// import { Link } from 'react-router-dom';
+// import poster from '../images/placeholder-poster.jpg';
+
+// function MovieCard() {
+//     return (
+//         <div className="movie-card">
+//             <div className="movie-poster">
+//                 <img src={poster} alt="Godzilla vs Kong" />
+//             </div>
+//             <div className="movie">
+//                 <h3>Godzilla vs. Kong</h3>
+//                 <Link to="/">More Info</Link>
+//             </div>
+//         </div>
+//     )
+// }
+
+// export default MovieCard
+
