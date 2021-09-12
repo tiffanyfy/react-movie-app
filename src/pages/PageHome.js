@@ -64,8 +64,8 @@ function PageHome({ sort }) {
 
     return (
         <div>
-            <NavSort />
             <Banner movieObj = {movieDataBanner} movieBannerLength = {movieBannerLength} />
+            <NavSort />
             {movieData !== null && <Movies movieData={movieData} />}
         </div>
     )
