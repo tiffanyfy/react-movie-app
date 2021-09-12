@@ -17,12 +17,14 @@ function MovieCard({ movieObj }) {
             <div className="movie-info">
                 <h3>{movieObj.title}</h3>
                 <p>{movieObj.release_date}</p>
-                <p>{movieObj.vote_average}</p>
-                <p>{movieObj.overview}</p>
+                <p>Rating: {movieObj.vote_average}</p>
                 <Link to={`/movie/${movieObj.id}`}>More Info</Link>
-                <div className="favorite-icon">
-                    {/* Placeholder code, will need to modify to add/remove favs */}
-                    <img src={addFavorite} alt="Heart icon" />
+                {/* Will need to modify code below to add/remove favs */}
+                <div className="add-favorite">
+                    <img src={addFavorite} alt="Add heart icon" />
+                </div>
+                <div className="remove-favorite">
+                    <img src={removeFavorite} alt="Heart icon" />
                 </div>
             </div>
         </div>
