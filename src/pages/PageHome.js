@@ -8,6 +8,8 @@ import { API_KEY, API_TOKEN } from '../globals/globals';
 function PageHome({ sort }) {
 
     const [movieData, setMovieData] = useState(null);
+
+    // variable for Banner
     const [movieDataBanner, setMovieDataBanner] = useState(null);
 
 
@@ -39,6 +41,7 @@ function PageHome({ sort }) {
 
     // Banner
     useEffect(() => {
+
         const fetchPopulrMovies = async() => {
             const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
 
@@ -46,12 +49,19 @@ function PageHome({ sort }) {
 
             popularMovieData = popularMovieData.results.splice(0, 10);
 
+            // console.log(popularMovieData)
+
             setMovieDataBanner(popularMovieData);
             
             console.log(movieDataBanner);
         }
         fetchPopulrMovies();
-    }, [])
+    },[])
+    // if , [] is added, run this only once but run infinitely without ,[]
+    // sometimes it movieDataBanner returns null but sometimes array... why?
+
+
+
 
 
 
