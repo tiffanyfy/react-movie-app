@@ -10,7 +10,7 @@ import PageSingleMovie from '../pages/PageSingleMovie';
 function AppRouter() {
   return (
     <Router>
-      <div className="App">
+      <div className="wrapper">
         <Header />
           <main>
             {/* <Banner /> */}
