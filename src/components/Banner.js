@@ -1,5 +1,6 @@
-import noPoster from '../images/no-movie-poster.jpg';
 import { useEffect, useState } from "react";
+import noPoster from '../images/no-movie-poster.jpg';
+
 
 function Banner( { movieObj, movieBannerLength } ) {
 
