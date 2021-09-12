@@ -11,6 +11,7 @@ function PageHome({ sort }) {
 
     // variable for Banner
     const [movieDataBanner, setMovieDataBanner] = useState(null);
+    const [movieBannerLength, setMovieBannerLength] = useState(null);
 
 
     // when change occurs(like sort property), run the function in useEffect
@@ -40,27 +41,23 @@ function PageHome({ sort }) {
 
 
     // Banner
-    useEffect(() => {
+    const fetchPopularMovies = async() => {
+        const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`, {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                Authorization: "Bearer " + API_TOKEN,
+            },
+        });
+        let popularMovieData = await res.json();
+        popularMovieData = popularMovieData.results.splice(0, 10);
+        setMovieDataBanner(popularMovieData);
+        setMovieBannerLength(popularMovieData.length);
 
-        const fetchPopulrMovies = async() => {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`);
-
-            let popularMovieData = await res.json();
-
-            popularMovieData = popularMovieData.results.splice(0, 10);
-
-            // console.log(popularMovieData)
-
-            setMovieDataBanner(popularMovieData);
-            
-            console.log(movieDataBanner);
-        }
-        fetchPopulrMovies();
-    },[])
-    // if , [] is added, run this only once but run infinitely without ,[]
-    // sometimes it movieDataBanner returns null but sometimes array... why?
-
-
+    };
+    useEffect( async () => {
+        await fetchPopularMovies();
+    }, []);
 
 
 
@@ -68,7 +65,7 @@ function PageHome({ sort }) {
     return (
         <div>
             <NavSort />
-            <Banner movieObj = {movieDataBanner} />
+            <Banner movieObj = {movieDataBanner} movieBannerLength = {movieBannerLength} />
             {movieData !== null && <Movies movieData={movieData} />}
         </div>
     )

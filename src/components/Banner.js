@@ -1,33 +1,36 @@
 import noPoster from '../images/no-movie-poster.jpg';
+import { useEffect, useState } from "react";
 
-function Banner( movieObj ) {
-    // console.log(movieObj.movieObj[0]);
-    // console.log(movieObj)
+function Banner( { movieObj, movieBannerLength } ) {
+
+    const [bannerData, setBannerData] = useState(null);
+    
+    useEffect(() => {
+        setBannerData(movieObj);
+    }, [movieObj]);
 
 
+    let randomNum = Math.floor(Math.random() * movieBannerLength);
 
-
-    // let randomNum = Math.floor(Math.random() * movieObj.movieObj.length);
-
-    // let movieDisplayed = movieObj.movieObj[randomNum];
+    let movieDisplayed = movieObj && movieObj[randomNum];
 
 
     return (
-        <div></div>
-        // <div className="banner-container">
-        //     <img src={`https://image.tmdb.org/t/p/original/${movieDisplayed.backdrop_path}`} alt="placeholder" />
-        //     <div className="banner-container" >
-        //         <h2 class="banner-title">{ movieDisplayed && movieDisplayed.title}</h2>
-        //         <h3 class="banner-release-date">{ movieDisplayed && movieDisplayed.release_date}</h3>
-        //         <p class="banner-overview">{ movieDisplayed && movieDisplayed.overview}</p>
+        // <div></div>
+        <div className="banner-container">
+            <img src={`https://image.tmdb.org/t/p/original/${movieDisplayed && movieDisplayed.backdrop_path}`} alt="placeholder" />
+            <div className="banner-container" >
+                <h2 class="banner-title">{ movieDisplayed && movieDisplayed.title}</h2>
+                <h3 class="banner-release-date">{ movieDisplayed && movieDisplayed.release_date}</h3>
+                <p class="banner-overview">{ movieDisplayed && movieDisplayed.overview}</p>
 
-        //         {/* path to the movie page (use movie id) */}
-        //         <a href="">Watch Now</a>
+                {/* path to the movie page (use movie id) */}
+                <a href="">Watch Now</a>
 
-        //     </div>
+            </div>
 
             
-        // </div>
+        </div>
     )
 }
 

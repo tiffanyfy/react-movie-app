@@ -1,6 +1,9 @@
 import noPoster from '../images/no-movie-poster.jpg';
+import addFavorite from '../images/add-favorite.png';
 
 function SingleMovie({ movieObj }) {
+
+
     return (
         <div className="single-movie" style={{backgroundImage: movieObj.backdrop_path && `url(https://image.tmdb.org/t/p/original/${movieObj.backdrop_path})`}}>
 
@@ -14,6 +17,8 @@ function SingleMovie({ movieObj }) {
                     </div>
                     <div className="single-movie-info">
                         <h2>{movieObj.title}</h2>
+                        <img src={addFavorite} alt="add favorite" />
+                        <p>{movieObj.release_date}</p>
                         <p>{movieObj.overview}</p>
                     </div>
                 </div>
