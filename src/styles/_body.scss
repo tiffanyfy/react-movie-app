@@ -1,6 +1,7 @@
 // Body Component
 
-// @media (min-width: map-get($breakpoint, tablet)) {}
-
-
-// @media (min-width: map-get($breakpoint, desktop)) {}
+body {
+    background-color: $background-color;
+    font-family: $main-font;
+    color: $font-color;
+}
