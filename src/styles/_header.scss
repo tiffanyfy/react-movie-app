@@ -9,7 +9,7 @@ header {
     top: 0;
     right: 0;
     z-index: 1;
-    background-color: #000;
+    background-color: black;
 
     a {
         color: $font-color;
@@ -46,7 +46,6 @@ header {
         left: 0;
         right: 0;
         z-index: 1;
-        background-color: #fff;
     }
 
     a {
@@ -55,7 +54,7 @@ header {
         font-family: 'Open Sans', Arial, Helvetica, sans-serif;
         font-size: 1rem;
         text-decoration: none;
-        color: #000;
+        color: white;
     }
 
 }
@@ -69,7 +68,7 @@ header {
 	background-color: transparent;
 	border: 0;
 	padding: 1rem;
-	fill: #FFF;
+	fill: white;
 }
 
 @media (min-width: map-get($breakpoint, desktop)) {
