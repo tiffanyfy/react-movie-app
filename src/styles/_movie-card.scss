@@ -10,12 +10,10 @@
 	right: 0;
 	padding: 1rem 1rem 0 1rem;
 
-    .container:hover.img{
-        opacity: 0.3;
 
     }
 
-}
+
 
 
 // .add-favorite {
@@ -28,20 +26,23 @@
 // }
 
 .movie-info {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.25s;
+	border-radius: 20px;
 }
 
-.containter:hover.movie-info{
-    opacity: 1;
 
-}
 
 @media (min-width: map-get($breakpoint, tablet)) {
 

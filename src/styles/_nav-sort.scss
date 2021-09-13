@@ -1,6 +1,21 @@
-// Nav Component
+// Nav Sort
 
-// @media (min-width: map-get($breakpoint, tablet)) {}
+nav {
 
+    padding: 2rem 1rem;
 
-// @media (min-width: map-get($breakpoint, desktop)) {}
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    a {
+        padding: 0.5rem;
+        display: block;
+        background-color: $accent-color;
+        color: white;
+        font-size: 0.75rem;
+        text-decoration: none;
+        border-radius: 20px;
+    }
+}
