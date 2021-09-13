@@ -2,10 +2,24 @@ import { Link } from 'react-router-dom';
 import noPoster from '../images/no-movie-poster.jpg';
 import addFavorite from '../images/add-favorite.png';
 import removeFavorite from '../images/remove-favorite.png';
+import {NavLink} from 'react-router-dom';
+
 
 function MovieCard({ movieObj }) {
+
+    function goSinglePage() {
+        // 1. Redirect to movie singles page
+        // 2. Pass movieObj to that page through props
+        console.log(`You clicked: ${movieObj.title}`);
+        // <SingleMovie />
+        // <NavLink to={`/movie/:${movieObj.id}`}></NavLink>
+        <NavLink to="/about">About</NavLink>
+
+
+    }
+
     return (
-        <div className="movie-card">
+        <div className="movie-card" onClick={goSinglePage}>
             <div className="movie-poster">
                 {/* If no poster, then render the no poster image */}
                 {/* If there is a movie poster, then output using movie id (url parameter) */}

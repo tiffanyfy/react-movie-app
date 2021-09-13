@@ -1,6 +1,5 @@
 // Movie Card Component
 .movie-poster {
-
 	img {
 		width: 100%;
 		border-radius: 10px;
@@ -9,12 +8,7 @@
 	top: 0;
 	right: 0;
 	padding: 1rem 1rem 0 1rem;
-
-
-    }
-
-
-
+}
 
 // .add-favorite {
 //     img {
@@ -26,31 +20,27 @@
 // }
 
 .movie-info {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: black;
-	color: white;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	opacity: 0;
-	transition: opacity 0.25s;
-	border-radius: 20px;
+	// position: absolute;
+	// top: 0;
+	// left: 0;
+	// width: 100%;
+	// height: 100%;
+	// background: black;
+	// color: white;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// justify-content: center;
+	// opacity: 0;
+	// transition: opacity 0.25s;
+	// border-radius: 20px;
 }
 
-
-
 @media (min-width: map-get($breakpoint, tablet)) {
-
-    .movie-poster {
-
-        img {
-            width: 100%;
-        }
-    }
+	.movie-poster {
+		img {
+			width: 100%;
+		}
+	}
 }
 // @media (min-width: map-get($breakpoint, desktop)) {}
