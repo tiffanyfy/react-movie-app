@@ -26,7 +26,7 @@ function Banner( { movieObj, movieBannerLength } ) {
                 <p class="banner-overview">{ movieDisplayed && movieDisplayed.overview}</p>
 
                 {/* path to the movie page (use movie id) */}
-                <a href="">Watch Now</a>
+                <a href={`/movie/${movieDisplayed && movieDisplayed.id}`} id="banner-watch-now-btn">Watch Now</a>
 
             </div>
 

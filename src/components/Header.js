@@ -3,7 +3,7 @@ import NavMain from './NavMain';
 
 function Header() {
     return (
-        <header>
+        <header className="site-header">
             <h1><Link to="/">Movie Club</Link></h1>
             <NavMain />
         </header>

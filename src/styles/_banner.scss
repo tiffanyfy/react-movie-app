@@ -7,15 +7,17 @@
     // object-position: -50%;
     opacity: 70%;
     position: relative;
+    top: 4rem;
+    margin-bottom: 3rem;
 }
 .banner-info-container{
-    max-width: 100%;
+  
     margin: 1rem;
     position: absolute;
     color: #fff;
     top: 16rem;
     // left: 3rem;
-    text-overflow: ellipsis;
+
     h2{
         text-align: center;
         font-size: 2rem;
@@ -25,6 +27,22 @@
     }
     h3{
         font-size: 1.5rem;
+    }
+    p{
+        max-width: 100%;
+        text-align: center;
+        text-overflow: ellipsis;
+    }
+    #banner-watch-now-btn{
+        color: $font-color;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-decoration: none;
+        background-color: $accent-color;
+        padding: 0.5rem 2.2rem;
+        border-radius: 50px;
+        box-shadow: 0px 3px 5px black;
+
     }
 
 
