@@ -1,62 +1,57 @@
 // Header Component
 
 header {
-    width: 100%;
-    display: flex;
-    align-items: center; // or align content?
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    background-color: black;
+	width: 100%;
+	display: flex;
+	align-items: center; // or align content?
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	background-color: black;
 
-    a {
-        color: $font-color;
-        text-decoration: none;
-    }
+	a {
+		color: $font-color;
+		text-decoration: none;
+	}
 
-    @media (min-width: map-get($breakpoint, tablet)) {
+	@media (min-width: map-get($breakpoint, tablet)) {
+		ul {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+		}
 
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-        
-        a {
-            margin-right: 1rem;
-        }
-
-    }
-    
+		a {
+			margin-right: 1rem;
+		}
+	}
 }
 
-
 .site-navigation {
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		display: none;
+		position: absolute;
+		top: 4rem;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		background-color: black;
+	}
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-        display: none;
-        position: absolute;
-        top: 4rem;
-        left: 0;
-        right: 0;
-        z-index: 1;
-    }
-
-    a {
-        display: block;
-        padding: 1rem;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        font-size: 1rem;
-        text-decoration: none;
-        color: white;
-    }
-
+	a {
+		display: block;
+		padding: 1rem;
+		font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+		font-size: 1rem;
+		text-decoration: none;
+		color: white;
+	}
 }
 
 .site-navigation.toggled ul {
@@ -72,7 +67,6 @@ header {
 }
 
 @media (min-width: map-get($breakpoint, desktop)) {
-
 	.menu-toggle {
 		display: none;
 	}
@@ -93,5 +87,4 @@ header {
 		line-height: 4.5rem; /* Matches the height of the .site-header */
 		padding: 0 1rem;
 	}
-
 }
