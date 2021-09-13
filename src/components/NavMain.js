@@ -2,7 +2,7 @@ import {NavLink} from 'react-router-dom';
 
 function NavMain() {
     return (
-        <nav className="site-navigation">
+        <nav className="site-navigation" id="site-navigation">
 
             <button class="menu-toggle" aria-controls="header-menu" aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
@@ -10,7 +10,7 @@ function NavMain() {
                 </svg>
             </button>
 
-            <ul>
+            <ul class="nav-menu" id="header-menu">
                 <li>
                     <NavLink to="/" exact>Home</NavLink>
                 </li>
