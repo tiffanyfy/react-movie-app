@@ -4,3 +4,13 @@
 
 
 // @media (min-width: map-get($breakpoint, desktop)) {}
+
+footer {
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: black;
+
+    p {
+        text-align: center;
+    }
+}
