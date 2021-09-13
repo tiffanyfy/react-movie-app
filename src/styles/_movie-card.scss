@@ -4,7 +4,7 @@
 		width: 100%;
 		border-radius: 10px;
 	}
-	position: relative;
+	// position: relative;
 	top: 0;
 	right: 0;
 	padding: 1rem 1rem 0 1rem;
@@ -20,12 +20,14 @@
 // }
 
 .movie-info {
-	// position: absolute;
-	// top: 0;
-	// left: 0;
-	// width: 100%;
-	// height: 100%;
-	// background: black;
+	position: absolute;
+	top: 0;
+	left: 30px;
+	opacity: 80%;
+	color: $font-color;
+	width: 100%;
+	height: 100%;
+	background: black;
 	// color: white;
 	// display: flex;
 	// flex-direction: column;
@@ -34,6 +36,10 @@
 	// opacity: 0;
 	// transition: opacity 0.25s;
 	// border-radius: 20px;
+}
+
+.movie-card {
+	position: relative;
 }
 
 @media (min-width: map-get($breakpoint, tablet)) {
