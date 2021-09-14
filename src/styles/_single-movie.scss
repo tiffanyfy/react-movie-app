@@ -1,10 +1,16 @@
 // Single Movie Component
 
+
 .single-movie-content{
+    // filter: brightness(20%);
+    background-color: $background-color;
     .single-movie-poster{
         img{
+            display: block;
             max-width: 100%;
-            margin-top: 4rem;
+            padding-top: 4rem;
+            // padding: 5rem auto;
+
         }
 
     }
@@ -12,27 +18,28 @@
     .single-movie-info-header{
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 }
 
-.single-movie-content{
-    background-image: none;
-}
+
 .single-movie-info{
     color: #fff;
     margin: 1.4rem;
     #single-movie-title{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: bold;
+        margin: 1.5rem 0;
     }
     #single-movie-release-date {
-        padding: 1rem 0;
+        // padding: 1rem 0;
         font-size: 0.9rem;
     }
     #single-movie-overview{
         line-height: 1.5;
-        margin-bottom: 2rem;
+        margin: 1rem 0;
         font-size: 0.8rem;
+        margin-bottom: 3rem;
     }
     #single-movie-watch-now-btn{
         color: $font-color;
@@ -46,7 +53,69 @@
     }
 }
 
-// @media (min-width: map-get($breakpoint, tablet)) {}
+@media (min-width: map-get($breakpoint, mobile)) {
+    .single-movie-content{
+        // background-color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 5em;
+        .single-movie-poster{
+            img{
+                max-width: 50%;
+                margin: 3rem auto;
+            }
+    
+        }
+        
+        .single-movie-info-header{
+            justify-content: space-around;
+            align-items: center;
+            width: 50%;
+            margin: 0 auto;
+
+        }
+    
+        // .single-movie-info-header{
+        //     display: flex;
+        //     justify-content: space-between;
+        //     align-items: center;
+        // }
+    }
+    .single-movie-info{
+        text-align: center;
+        #single-movie-title{
+            width: 40%;
+            margin-top: 2rem;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #single-movie-overview{
+            width: 70%;
+            margin: 2rem auto;
+        }
+
+        #single-movie-watch-now-btn{
+            margin: 0 auto;
+
+        }
+    }
 
 
-// @media (min-width: map-get($breakpoint, desktop)) {}
+
+}
+// mobile: 640px,
+// tablet: 768px,
+// desktop: 1024px,
+// );
+
+@media (min-width: 800px) {
+    .single-movie-content{
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.5);
+        
+    }
+}
+@media (min-width: map-get($breakpoint, desktop)) {
+    .single-movie-content{
+        display: flex;
+        
+    }
+}

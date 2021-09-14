@@ -1,3 +1,6 @@
+import useGlobal from '../store/globalAppState';
+
+
 function PageFavs() {
     
 
@@ -6,6 +9,15 @@ function PageFavs() {
     // Get favMovies
     let displayFavs = JSON.parse(localStorage.getItem("favMovies"))
     console.log(displayFavs)
+
+
+
+    // const globalStateAndActions = useGlobal();
+    // const globalState = globalStateAndActions[0];
+
+    // useEffect(()=>{
+    //     document.title = ``
+    // })
     
     return (
         <div>
