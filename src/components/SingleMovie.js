@@ -3,7 +3,6 @@ import addFavorite from '../images/add-favorite.png';
 
 function SingleMovie({ movieObj }) {
 
-    // {backgroundImage: movieObj.backdrop_path && `url(https://image.tmdb.org/t/p/original/${movieObj.backdrop_path})`}
     return (
         <div className="single-movie" style={{backgroundImage: movieObj.backdrop_path && `url(https://image.tmdb.org/t/p/original/${movieObj.backdrop_path})`}}>
             <div className="single-movie-background-image" ></div>
@@ -25,7 +24,7 @@ function SingleMovie({ movieObj }) {
                         </div>
                         
                         <p id="single-movie-overview">{movieObj.overview}</p>
-                        <a href="" id="single-movie-watch-now-btn">Watch Now</a>
+                        <a href={`/movie/${movieObj.id}`} id="single-movie-watch-now-btn">Watch Now</a>
                     </div>
                 </div>
             </div>
