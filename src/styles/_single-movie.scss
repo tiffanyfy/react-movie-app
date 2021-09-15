@@ -1,42 +1,11 @@
 // Single Movie Component
 .single-movie-content{
-    img{
-        max-width: 100%;
-    }
-    .single-movie-info-header{
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-.single-movie-info{
-    color: #fff;
-    margin: 1rem;
-    #single-movie-title{
-        font-size: 1.4rem;
-    }
-    #single-movie-release-date {
-        padding: 1rem 0;
-    }
-    #single-movie-overview{
-        line-height: 1.3;
-    } 
-}
-
-
-.single-movie-content{
-    // filter: brightness(20%);
     background-color: $background-color;
     #single-movie-poster{
-            display: block;
-            max-width: 100%;
-            padding-top: 4rem;
-            // padding: 5rem auto;
-
-        }
-
-    
-
+        display: block;
+        max-width: 100%;
+        padding-top: 4rem;
+    }
     .single-movie-info-header{
         display: flex;
         justify-content: space-between;
@@ -44,17 +13,16 @@
     }
 }
 
-
 .single-movie-info{
     color: #fff;
     margin: 1.4rem;
     #single-movie-title{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: bold;
         margin: 1.5rem 0;
     }
     #single-movie-release-date {
-        // padding: 1rem 0;
+        padding: 1rem 0;
         font-size: 0.9rem;
     }
     #single-movie-overview{
@@ -62,6 +30,9 @@
         margin: 1rem 0;
         font-size: 0.8rem;
         margin-bottom: 3rem;
+    } 
+    #single-movie-watch-now-btn-container{
+        display: flex;
     }
     #single-movie-watch-now-btn{
         color: $font-color;
@@ -73,7 +44,100 @@
         border-radius: 50px;
         box-shadow: 0px 3px 5px black;
     }
+    
+    .single-movie-rating{
+        display: flex;
+        align-items: center;
+        #single-movie-rate-icon{
+            background-color: #fff;
+            margin: 0.2rem;
+            border-radius: 50%;
+            border: 3px solid black;
+            margin-right: 0.5rem;
+            
+        }
+    }
+
 }
+
+
+// #single-movie-title{
+//     font-size: 1.2rem;
+//     font-weight: bold;
+//     margin: 1.5rem 0;
+// }
+// #single-movie-release-date {
+//     // padding: 1rem 0;
+//     font-size: 0.9rem;
+// }
+// #single-movie-overview{
+//     line-height: 1.5;
+//     margin: 1rem 0;
+//     font-size: 0.8rem;
+//     margin-bottom: 3rem;
+// }
+// #single-movie-watch-now-btn{
+//     color: $font-color;
+//     font-weight: 600;
+//     letter-spacing: 1px;
+//     text-decoration: none;
+//     background-color: $accent-color;
+//     padding: 0.5rem 2.2rem;
+//     border-radius: 50px;
+//     box-shadow: 0px 3px 5px black;
+// }
+
+
+// .single-movie-content{
+//     // filter: brightness(20%);
+//     background-color: $background-color;
+//     #single-movie-poster{
+//             display: block;
+//             max-width: 100%;
+//             padding-top: 4rem;
+//             // padding: 5rem auto;
+
+//         }
+
+    
+
+//     .single-movie-info-header{
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+// }
+
+
+// .single-movie-info{
+//     color: #fff;
+//     margin: 1.4rem;
+//     #single-movie-title{
+//         font-size: 1.2rem;
+//         font-weight: bold;
+//         margin: 1.5rem 0;
+//     }
+//     #single-movie-release-date {
+//         // padding: 1rem 0;
+//         font-size: 0.9rem;
+//     }
+//     #single-movie-overview{
+//         line-height: 1.5;
+//         margin: 1rem 0;
+//         font-size: 0.8rem;
+//         margin-bottom: 3rem;
+//     }
+//     #single-movie-watch-now-btn{
+//         color: $font-color;
+//         font-weight: 600;
+//         letter-spacing: 1px;
+//         text-decoration: none;
+//         background-color: $accent-color;
+//         padding: 0.5rem 2.2rem;
+//         border-radius: 50px;
+//         box-shadow: 0px 3px 5px black;
+//     }
+// }
 
 @media (min-width: map-get($breakpoint, mobile)) {
     .single-movie-content{
@@ -118,6 +182,11 @@
         #single-movie-watch-now-btn{
             margin: 0 auto;
 
+        }
+        .single-movie-rating{
+            width: 10%;
+            text-align: center;
+            margin: 0 auto;
         }
     }
 
@@ -189,6 +258,16 @@
                 margin: 2rem 0;
                 font-size: 1rem;
             }
+            .single-movie-rating{
+                width: 10%;
+                font-size: 2rem;
+                margin: 0;
+                margin-top: 1rem;
+                // img{
+                //     width: 80px;
+                // }
+            }
+            
         }
         
     }

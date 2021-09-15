@@ -1,5 +1,10 @@
+import { useState } from 'react';
 import noPoster from '../images/no-movie-poster.jpg';
 import addFavorite from '../images/add-favorite.png';
+import thumbup from '../images/thumbup.svg';
+import thumbdown from '../images/thumbdown.svg';
+import mehIcon from '../images/meh.svg';
+import playIcon from '../images/video.svg';
 
 function SingleMovie({ movieObj }) {
 
@@ -23,8 +28,19 @@ function SingleMovie({ movieObj }) {
                              <img src={addFavorite} alt="add favorite" id="single-movie-fav-btn"/>
                         </div>
                         
+                        <div className="single-movie-rating">
+                            <img src={movieObj.vote_average>5.0? thumbup : thumbdown} alt="rate Icon" id="single-movie-rate-icon" />
+                            <span >{(movieObj.vote_average)*10}%</span>
+
+                        </div>
                         <p id="single-movie-overview">{movieObj.overview}</p>
-                        <a href={`/movie/${movieObj.id}`} id="single-movie-watch-now-btn">Watch Now</a>
+                        <div className="single-movie-watch-now-btn-container">
+                            <a href={`/movie/${movieObj.id}`} id="single-movie-watch-now-btn">Watch Now
+                        {/* <img src={playIcon} alt="play" id="play-icon" /> */}
+                        </a>
+
+                        </div>
+                    
                     </div>
                 </div>
             </div>
