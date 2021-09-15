@@ -99,8 +99,25 @@
     }
     .banner-info-container{
         top: -12rem; 
-
+        h2{
+            font-size: 2rem;
+        }
     }
+  
+}
+@media(min-width: 900px){
+
+    .banner-info-container{
+        top: -15rem; 
+        h2{
+            font-size: 2rem;
+        }
+        .banner-overview{
+            max-width: 60%;
+            margin: 0 0 2rem 5rem;
+        }
+    }
+  
 }
 
 @media(min-width: map-get($breakpoint, desktop)){
