@@ -95,13 +95,18 @@
 @media(min-width: map-get($breakpoint, tablet)){
     .banner-container{
         display: block;
+        
+    }
+    .banner-info-container{
+        top: -12rem; 
+
     }
 }
 
 @media(min-width: map-get($breakpoint, desktop)){
     .banner-container{
         margin-top: 0.5rem;
-        top: -15rem;
+        top: -20rem;
     }
     .banner-info-container{
         text-align: left;
@@ -147,8 +152,8 @@
         }
     }
 }
-$breakpoint: (
-    mobile: 640px,
-    tablet: 768px,
-    desktop: 1024px,
-);
+// $breakpoint: (
+//     mobile: 640px,
+//     tablet: 768px,
+//     desktop: 1024px,
+// );
