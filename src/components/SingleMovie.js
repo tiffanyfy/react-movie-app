@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import noPoster from '../images/no-movie-poster.jpg';
 import addFavorite from '../images/add-favorite.png';
+import removeFavorite from '../images/remove-favorite.png'
 import thumbup from '../images/thumbup.svg';
 import thumbdown from '../images/thumbdown.svg';
 import mehIcon from '../images/meh.svg';
@@ -25,7 +26,16 @@ function SingleMovie({ movieObj }) {
                         <div className="single-movie-info-header">
                             <p id="single-movie-release-date">{movieObj.release_date}</p>
                         
-                             <img src={addFavorite} alt="add favorite" id="single-movie-fav-btn"/>
+                             {/* <img src={addFavorite} alt="add favorite" id="single-movie-fav-btn"/>
+                             <div className="add-favorite" id="single-movie-fav-btn" onClick={addFav}> */}
+                             <div className="single-movie-favorite-btn">
+                                <img src={addFavorite} alt="Add heart icon"
+                                 />
+                                 <img src={removeFavorite} alt="Remove Heart icon" id="single-movie-remove-favorite"/>
+                             </div>
+                                
+                            {/* </div> */}
+                            
                         </div>
                         
                         <div className="single-movie-rating">
