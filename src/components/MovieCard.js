@@ -1,12 +1,15 @@
+import { useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import noPoster from '../images/no-movie-poster.jpg';
 import addFavorite from '../images/add-favorite.png';
 import removeFavorite from '../images/remove-favorite.png';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { favMovies } from '../globals/globals';
 
 
 function MovieCard({ movieObj }) {
+
+    const [fav, setFav] = useState(false)
     
     function addFav() {
 
@@ -18,6 +21,9 @@ function MovieCard({ movieObj }) {
             favMovies.push(movieObj.id);
             localStorage.setItem("favMovies", JSON.stringify(favMovies))
         }
+
+        setFav(JSON.parse(localStorage.getItem("favMovies")))
+        console.log(JSON.parse(localStorage.getItem("favMovies")))
         
         // if (localStorage.getItem("favMovies") !== null) {
         //     let favMovies = []
@@ -48,6 +54,31 @@ function MovieCard({ movieObj }) {
         
     }
 
+    const heartIcon = () => {
+        if (favMovies.includes(movieObj.id)) {
+            console.log("faved")
+            return (
+                <div className="remove-favorite" onClick={addFav}>
+                    <img src={removeFavorite} alt="Unfavorite icon" />
+                </div>
+            )
+        } else {
+            console.log("unfaved")
+            return (
+                <div className="add-favorite" onClick={addFav}>
+                    <img src={addFavorite} alt="Favorite icon" />
+                </div>
+            )
+        }
+    }
+
+{/* <div className="add-favorite" onClick={addFav}>
+    <img src={addFavorite} alt="Favorite icon" />
+</div>
+<div className="remove-favorite">
+    <img src={removeFavorite} alt="Unfavorite icon" />
+</div> */}
+
     return (
         <div className="movie-card">
             <div className="movie-poster">
@@ -65,12 +96,8 @@ function MovieCard({ movieObj }) {
                 <Link to={`/movie/${movieObj.id}`}>More Info</Link>
                 {/* Will need to modify code below to add/remove favs */}
                 {/* Event handler to add fav when clicked - go to addFav function */}
-                <div className="add-favorite" onClick={addFav}>
-                    <img src={addFavorite} alt="Add heart icon" />
-                </div>
-                <div className="remove-favorite">
-                    <img src={removeFavorite} alt="Heart icon" />
-                </div>
+                <div>{heartIcon()}</div>
+                
             </div>
         </div>
     )

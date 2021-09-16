@@ -11,8 +11,10 @@ header {
 
 	h1 {
 		font-size: 2rem;
+		font-weight: map-get($font-weight, bold);
 		font-style: italic;
 		text-transform: uppercase;
+		// add red drop shadow?
 	}
 
 	a {

@@ -4,8 +4,6 @@
 $background-color: #2f2f2f;
 $accent-color: #db3a34;
 $font-color: #ffffff;
-$nav-sort-button: #545454;
-$movie-hover: rgba(0, 0, 0, 0.75);
 
 // Font Variables
 $main-font: 'Roboto', sans-serif;
@@ -23,7 +21,7 @@ $font-weight: (
 
 // Image Variables
 $img-width: 100%;
-$movie-border-radius: 20%; // (border radius for each individual movie card on home page)
+$movie-card-radius: 10px; // border radius for each movie card on home page
 
 // Media Query Breakpoints
 $breakpoint: (
