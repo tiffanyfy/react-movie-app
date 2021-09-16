@@ -6,15 +6,13 @@
 }
 
 .movie-poster {
-	position: relative;
 	padding: 1rem 1rem 0 1rem;
 	display: block;
-	
+
 	img {
 		width: 100%;
 		border-radius: 10px;
 	}
-	
 }
 
 // .add-favorite {
@@ -28,32 +26,28 @@
 
 .movie-info {
 	position: absolute;
-	width: 90%;
-	height: 100%;
+	width: 95%;
+	height: 90%;
+	padding: 1rem;
 	top: 0;
-	left: 15px;
-	display: flex;
-	flex-direction: column;
-	align-items: left;
-	justify-content: center;
+	margin: 1rem;
 	border-radius: 10px;
 	color: $font-color;
 
 	&:hover {
-		
-		background-color:rgba(0, 0, 0, 0.5);
+		background-color: rgba(0, 0, 0, 0.5);
 
-		h3 {
+		h3,
+		p {
 			display: block;
 			margin-bottom: 1rem;
 			font-size: 1.5rem;
 		}
 
-		p,
-		div{
-			display: block;
-			margin-bottom: 1rem;
-		}
+		// div {
+		// 	display: block;
+		// 	margin-bottom: 1rem;
+		// }
 
 		a {
 			display: block;
@@ -66,7 +60,6 @@
 			border-radius: 50px;
 			box-shadow: 0px 3px 5px black;
 		}
-
 	}
 
 	h3,
@@ -75,7 +68,6 @@
 	div {
 		display: none;
 	}
-	
 }
 
 @media (min-width: map-get($breakpoint, tablet)) {

@@ -1,121 +1,113 @@
 // banner
 .banner-container {
-
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: 75%;
-        filter: brightness(40%);
-        position: relative;
-        top: 4rem;
-    }
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: 75%;
+		filter: brightness(40%);
+		position: relative;
+		top: 4rem;
+	}
 }
 
-.banner-info-container{
-    margin: 1rem;
-    position: relative;
-    color: #fff;
-    top: -9rem;
-    // this for the bigger size
-    // top: -13rem;
-    text-align: center;
-    z-index: 1;
-    line-height: 1.4;
-    // height may vary 
-    height: 40px;
+.banner-info-container {
+	margin: 1rem;
+	position: relative;
+	color: #fff;
+	top: -9rem;
+	// this for the bigger size
+	// top: -13rem;
+	text-align: center;
+	z-index: 1;
+	line-height: 1.4;
+	// height may vary
+	height: 40px;
 
-    h2{
-        font-size: 1rem;
-        // font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: .8rem;
-        margin-left: 5rem;
-        text-align: left;
-        
+	h2 {
+		font-size: 1rem;
+		// font-size: 2rem;
+		font-weight: bold;
+		margin-bottom: 0.8rem;
+		margin-left: 5rem;
+		text-align: left;
+	}
 
-    }
-    h3{
-        font-size: 1.5rem;
-    }
+	h3 {
+		font-size: 1.5rem;
+	}
 
-    .banner-overview{
-        display: none;
-        max-width: 100%;
-        margin-bottom: 2rem;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 2; /* number of lines to show */
-        -webkit-box-orient: vertical;
-        text-align: left;
-
-    }
-    #banner-watch-now-btn{
-        color: $font-color;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-decoration: none;
-        background-color: $accent-color;
-        font-size: 1.3rem;
-        padding: 0.5rem 2.7rem;
-        border-radius: 50px;
-        box-shadow: 0px 3px 5px black;
-        // shrink the button size and everything for 320px size
-        
-
-    }
-    
+	.banner-overview {
+		display: none;
+		max-width: 100%;
+		margin-bottom: 2rem;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 2; /* number of lines to show */
+		-webkit-box-orient: vertical;
+		text-align: left;
+	}
+	#banner-watch-now-btn {
+		color: $font-color;
+		font-weight: 600;
+		letter-spacing: 1px;
+		text-decoration: none;
+		background-color: $accent-color;
+		font-size: 1.3rem;
+		padding: 0.5rem 2.7rem;
+		border-radius: 50px;
+		box-shadow: 0px 3px 5px black;
+		// shrink the button size and everything for 320px size	}
+	}
 }
-.banner-container{
-    display: none;
+.banner-container {
+	display: none;
 }
 // @media(min-width: ){
 
 // }
 
-@media(min-width: map-get($breakpoint, mobile)){
-    .banner-info-container{
-        .banner-overview{
-            max-width: 80%;
-            margin: 0 auto;
-            margin-bottom: 2rem;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
-
-        }
-    }
-
+@media (min-width: map-get($breakpoint, mobile)) {
+	.banner-info-container {
+		.banner-overview {
+			max-width: 80%;
+			margin: 0 auto;
+			margin-bottom: 2rem;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+		}
+	}
 }
 
-@media(min-width: map-get($breakpoint, tablet)){
-    .banner-container{
-        display: block;
-    }
+@media (min-width: map-get($breakpoint, tablet)) {
+	.banner-container {
+		display: block;
+	}
 }
 
-@media(min-width: map-get($breakpoint, desktop)){
-    .banner-container{
-        margin-top: 0.5rem;
-        top: -15rem;
-    }
-    .banner-info-container{
-        text-align: left;
-        h2 {
-            margin-left: 6rem;
-        }
-        .banner-overview{
-            max-width: 50%;
-            margin-left: 6rem;
-        }
-        #banner-watch-now-btn{
-            margin-left: 6rem;
-        }
-    }
+@media (min-width: map-get($breakpoint, desktop)) {
+	.banner-container {
+		margin-top: 0.5rem;
+		top: -15rem;
+	}
+	.banner-info-container {
+		text-align: left;
+		h2 {
+			margin-left: 6rem;
+		}
+		.banner-overview {
+			max-width: 50%;
+			margin-left: 6rem;
+		}
+		#banner-watch-now-btn {
+			margin-left: 6rem;
+		}
+	}
 }
 
 // @media(min-width: 1500px){
@@ -123,32 +115,31 @@
 //         width: 100%;
 //         height: 500px;
 //         object-position: 100% 20%;
-        
+
 //     }
 
 // }
 
-@media(min-width: 1780px){
-
-    .banner-info-container{
-        
-        h2 {
-            margin-left: 10rem;
-            font-size: 2.4rem;
-        }
-        .banner-overview{
-            margin-left: 10rem;
-            font-size: 1.2rem;
-        }
-        #banner-watch-now-btn{
-            margin-left: 10rem;
-            font-size: 1.2rem;
-            padding: 0.7rem 2.2rem;
-        }
-    }
+@media (min-width: 1780px) {
+	.banner-info-container {
+		h2 {
+			margin-left: 10rem;
+			font-size: 2.4rem;
+		}
+		.banner-overview {
+			margin-left: 10rem;
+			font-size: 1.2rem;
+		}
+		#banner-watch-now-btn {
+			margin-left: 10rem;
+			font-size: 1.2rem;
+			padding: 0.7rem 2.2rem;
+		}
+	}
 }
-$breakpoint: (
-    mobile: 640px,
-    tablet: 768px,
-    desktop: 1024px,
-);
+
+// $breakpoint: (
+// 	mobile: 640px,
+// 	tablet: 768px,
+// 	desktop: 1024px,
+// )

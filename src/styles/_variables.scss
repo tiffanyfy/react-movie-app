@@ -1,22 +1,24 @@
 // Variables
 
 // Color Variables
-$background-color: #2F2F2F;
-$accent-color: #DB3A34;
-$font-color: #FFFFFF;
+$background-color: #2f2f2f;
+$accent-color: #db3a34;
+$font-color: #ffffff;
 $nav-sort-button: #545454;
-$movie-hover: rgba(0, 0, 0, 0.75); // supposed to be black #000 75% opacity
+$movie-hover: rgba(0, 0, 0, 0.75);
 
 // Font Variables
 $main-font: 'Roboto', sans-serif;
 $font-size: (
-    mobile: 0.75rem,
-    tablet: 0.875rem,
-    desktop: 1rem,
+	mobile: 0.75rem,
+	tablet: 0.875rem,
+	desktop: 1rem,
 );
 $font-weight: (
-    regular: 300,
-    bold: 700,
+	thin: 300,
+	regular: 400,
+	semibold: 600,
+	bold: 700,
 );
 
 // Image Variables
@@ -25,7 +27,7 @@ $movie-border-radius: 20%; // (border radius for each individual movie card on h
 
 // Media Query Breakpoints
 $breakpoint: (
-    mobile: 640px,
-    tablet: 768px,
-    desktop: 1024px,
+	mobile: 640px,
+	tablet: 768px,
+	desktop: 1024px,
 );

@@ -1,17 +1,17 @@
-// Header Component
-
 header {
 	width: 100%;
 	display: flex;
-	align-items: center; // or align content?
+	align-items: center;
 	justify-content: space-between;
-	position: fixed;
+	// position: fixed;
 	top: 0;
 	right: 0;
 	z-index: 2;
 	background-color: black;
 
 	h1 {
+		font-size: 2rem;
+		font-style: italic;
 		text-transform: uppercase;
 	}
 
@@ -34,7 +34,6 @@ header {
 	}
 }
 
-
 .site-navigation {
 	ul {
 		display: none;
@@ -53,7 +52,6 @@ header {
 	a {
 		display: block;
 		padding: 1rem;
-		font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 		font-size: 1rem;
 		text-decoration: none;
 		color: white;
