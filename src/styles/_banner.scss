@@ -8,7 +8,7 @@
 		object-position: 75%;
 		filter: brightness(40%);
 		position: relative;
-		top: 4rem;
+		// top: 4rem;
 	}
 }
 
@@ -69,7 +69,7 @@
 
 // }
 
-@media (min-width: map-get($breakpoint, mobile)) {
+@media (min-width: map-get($breakpoint, tablet-small)) {
 	.banner-info-container {
 		.banner-overview {
 			max-width: 80%;
@@ -84,7 +84,7 @@
 	}
 }
 
-@media (min-width: map-get($breakpoint, tablet)) {
+@media (min-width: map-get($breakpoint, tablet-large)) {
 	.banner-container {
 		display: block;
 	}
@@ -92,7 +92,7 @@
 
 @media (min-width: map-get($breakpoint, desktop)) {
 	.banner-container {
-		margin-top: 0.5rem;
+		// margin-top: 0.5rem;
 		top: -15rem;
 	}
 	.banner-info-container {
