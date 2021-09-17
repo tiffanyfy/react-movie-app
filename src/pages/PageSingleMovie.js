@@ -23,7 +23,6 @@ function PageSingleMovie() {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer '+ API_TOKEN 
                 }
-                
             });
             let rawMovieData = await res.json();
 
