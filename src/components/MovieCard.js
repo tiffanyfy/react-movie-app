@@ -5,6 +5,8 @@ import addFavorite from '../images/add-favorite.png';
 import removeFavorite from '../images/remove-favorite.png';
 import { NavLink } from 'react-router-dom';
 import { favMovies } from '../globals/globals';
+import thumbup from '../images/thumbup.svg';
+import thumbdown from '../images/thumbdown.svg';
 
 
 function MovieCard({ movieObj }) {
@@ -92,7 +94,11 @@ function MovieCard({ movieObj }) {
             <div className="movie-info">
                 <h3>{movieObj.title}</h3>
                 <p>Release Date: {movieObj.release_date}</p>
-                <p>Rating: {movieObj.vote_average}</p>
+                {/* <p>Rating: {movieObj.vote_average}</p> */}
+                <div className="movie-rating">
+                            <img src={movieObj.vote_average>5.0? thumbup : thumbdown} alt="rate Icon" id="movie-rating-icon" />
+                            <span >{(movieObj.vote_average)*10}%</span>
+                        </div>
                 <p className="overview">{movieObj.overview}</p>
                 <Link to={`/movie/${movieObj.id}`}>More Info</Link>
                 <div>{heartIcon()}</div>

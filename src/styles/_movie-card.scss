@@ -45,8 +45,12 @@
 			display: block;
 			margin-bottom: 2rem;
 			padding: 0 2rem;
-			font-size: 2rem;
+			font-size: 1.75rem;
 			font-weight: map-get($font-weight, bold);
+
+			@media (min-width: map-get($breakpoint, tablet-small)) {
+				font-size: 2rem;
+			}
 		}
 
 		p {
@@ -54,6 +58,10 @@
 			margin-bottom: 1.25rem;
 			font-size: 1.25rem;
 			padding: 0 2rem;
+
+			@media (min-width: map-get($breakpoint, tablet-small)) {
+				font-size: 1.25rem;
+			}
 		}
 
 		a {
@@ -79,7 +87,13 @@
 				padding: 1rem 0 0 2rem;
 				width: 40px;
 				// should we position to top right corner?
-				// need to fix secondary heart icon (when clicking favorite and unfavorite)
+			}
+		}
+
+		.remove-favorite {
+			img{
+				padding: 1rem 0 0 2rem;
+				width: 40px;
 			}
 		}
 
@@ -90,6 +104,21 @@
 			text-align: left;
 			text-overflow: ellipsis;
 			overflow: hidden;
+		}
+
+		.movie-rating {
+			padding-left: 2rem;
+			margin-bottom: 1.25rem;
+			display: flex;
+			align-items: center;
+
+			img {
+				background-color: $font-color;
+				// margin: 0.2rem;
+				border-radius: 50%;
+				border: 3px solid black;
+				margin-right: 0.5rem;
+			}
 		}
 	}
 }
