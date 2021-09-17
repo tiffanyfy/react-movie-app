@@ -1,11 +1,12 @@
 // Movie Component
 
 .movies-container {
-	// padding: 2rem;
 	margin: 0 auto;
 	max-width: 1080px;
 
-	@media (min-width: map-get($breakpoint, tablet-small)) {
+	// Can switch media query breakpoint between tablet-small and tablet-small
+	// To see which looks better
+	@media (min-width: map-get($breakpoint, tablet-large)) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 1rem;
