@@ -6,10 +6,12 @@ import PageHome from '../pages/PageHome';
 import PageAbout from '../pages/PageAbout';
 import PageFavorites from '../pages/PageFavorites';
 import PageSingleMovie from '../pages/PageSingleMovie';
+import ScrollToTop from '../components/ScrollToTop';
 
 function AppRouter() {
   return (
     <Router>
+    <ScrollToTop />
       <div className="wrapper">
         <Header />
           <main>
