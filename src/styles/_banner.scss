@@ -39,6 +39,11 @@
 				font-weight: bold;
 				margin-bottom: 1rem;
 				text-align: left;
+
+				@media (min-width: map-get($breakpoint, desktop)) {
+					font-size: 1.75rem;
+				}
+
 			}
 
 			.banner-overview {
@@ -55,6 +60,7 @@
 				@media (min-width: map-get($breakpoint, desktop)) {
 					-webkit-line-clamp: 4;
 					max-width: map-get($breakpoint, desktop);
+					font-size: 1.125rem;
 				}
 			}
 
