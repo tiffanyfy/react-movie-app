@@ -3,7 +3,6 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	// position: fixed;
 	top: 0;
 	right: 0;
 	z-index: 2;
@@ -14,16 +13,20 @@ header {
 		font-weight: map-get($font-weight, bold);
 		font-style: italic;
 		text-transform: uppercase;
-		// add red drop shadow?
+		// text-shadow: 2px 2px 2px $accent-color;
 	}
 
 	a {
 		color: $font-color;
 		text-decoration: none;
 		padding-left: 1rem;
+		&:hover {
+			color: $accent-color;
+			// text-shadow: none;
+		}
 	}
 
-	@media (min-width: map-get($breakpoint, tablet)) {
+	@media (min-width: map-get($breakpoint, tablet-large)) {
 		ul {
 			display: flex;
 			flex-direction: row;
