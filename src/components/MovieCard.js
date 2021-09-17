@@ -93,11 +93,11 @@ function MovieCard({ movieObj }) {
             </div>
             <div className="movie-info">
                 <h3>{movieObj.title}</h3>
-                <p>Release Date: {movieObj.release_date}</p>
+                <p>{movieObj.release_date}</p>
                 {/* <p>Rating: {movieObj.vote_average}</p> */}
                 <div className="movie-rating">
                             <img src={movieObj.vote_average>5.0? thumbup : thumbdown} alt="rate Icon" id="movie-rating-icon" />
-                            <span >{(movieObj.vote_average)*10}%</span>
+                            <p>{(movieObj.vote_average)*10}%</p>
                         </div>
                 <p className="overview">{movieObj.overview}</p>
                 <Link to={`/movie/${movieObj.id}`}>More Info</Link>
