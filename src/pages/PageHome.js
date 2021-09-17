@@ -60,7 +60,9 @@ function PageHome({ sort }) {
     }, []);
 
 
-
+    <div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    </div>
 
     return (
         <div>
@@ -68,6 +70,8 @@ function PageHome({ sort }) {
             <NavSort />
             {movieData !== null && <Movies movieData={movieData} />}
         </div>
+
+        
     )
 }
 
