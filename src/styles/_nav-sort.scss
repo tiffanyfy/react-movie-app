@@ -26,11 +26,11 @@
 			font-style: italic;
 		}
 
-		@media (min-width: map-get($breakpoint, mobile)) {
+		@media (min-width: map-get($breakpoint, tablet-small)) {
 			font-size: 1.5rem;
 		}
 
-		@media (min-width: map-get($breakpoint, tablet)) {
+		@media (min-width: map-get($breakpoint, tablet-large)) {
 			font-size: 1.75rem;
 		}
 

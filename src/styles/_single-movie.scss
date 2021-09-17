@@ -143,7 +143,7 @@
 //     }
 // }
 
-@media (min-width: map-get($breakpoint, mobile)) {
+@media (min-width: map-get($breakpoint, tablet-small)) {
     .single-movie-content{
         // background-color: rgba(0, 0, 0, 0.5);
         

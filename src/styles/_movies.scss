@@ -5,7 +5,7 @@
 	margin: 0 auto;
 	max-width: 1080px;
 
-	@media (min-width: map-get($breakpoint, mobile)) {
+	@media (min-width: map-get($breakpoint, tablet-small)) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 1rem;
