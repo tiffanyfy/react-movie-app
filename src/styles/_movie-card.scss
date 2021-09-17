@@ -39,31 +39,32 @@
 	}
 
 	&:hover {
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: rgba(0, 0, 0, 0.75);
 
 		h3 {
 			display: block;
-			margin-bottom: 1rem;
-			font-size: 1.5rem;
-			padding: 0.5rem 2rem;
+			margin-bottom: 2rem;
+			padding: 0 2rem;
 			font-size: 2rem;
+			font-weight: map-get($font-weight, bold);
 		}
 
 		p {
 			display: block;
-			margin-bottom: 1rem;
-			font-size: 1.5rem;
-			padding: 0.5rem 2rem;
+			margin-bottom: 1.25rem;
+			font-size: 1.25rem;
+			padding: 0 2rem;
 		}
 
 		a {
 			display: block;
 			width: 20%;
-			margin-left: 1.5rem;
-			margin-bottom: 1rem;
-			padding: 0.5rem;
+			margin: 0 0 1rem 2rem;
+			// margin-left: 1.5rem;
+			// margin-bottom: 1rem;
+			padding: 0.5rem 1.5rem;
 			background-color: $accent-color;
-			color: white;
+			color: $font-color;
 			text-decoration: none;
 			border-radius: 50px;
 			box-shadow: 0px 3px 5px black;
@@ -71,9 +72,24 @@
 
 		div {
 			display: block;
-			margin-bottom: 1rem;
-			font-size: 1.5rem;
-			padding: 0.5rem 2rem;
+		}
+
+		.add-favorite {
+			img{
+				padding: 1rem 0 0 2rem;
+				width: 40px;
+				// should we position to top right corner?
+				// need to fix secondary heart icon (when clicking favorite and unfavorite)
+			}
+		}
+
+		.overview {
+			display: -webkit-box;
+			-webkit-line-clamp: 3; /* number of lines to show */
+			-webkit-box-orient: vertical;
+			text-align: left;
+			text-overflow: ellipsis;
+			overflow: hidden;
 		}
 	}
 }

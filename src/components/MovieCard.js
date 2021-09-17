@@ -91,11 +91,10 @@ function MovieCard({ movieObj }) {
             </div>
             <div className="movie-info">
                 <h3>{movieObj.title}</h3>
-                <p>{movieObj.release_date}</p>
+                <p>Release Date: {movieObj.release_date}</p>
                 <p>Rating: {movieObj.vote_average}</p>
+                <p className="overview">{movieObj.overview}</p>
                 <Link to={`/movie/${movieObj.id}`}>More Info</Link>
-                {/* Will need to modify code below to add/remove favs */}
-                {/* Event handler to add fav when clicked - go to addFav function */}
                 <div>{heartIcon()}</div>
                 
             </div>
