@@ -7,6 +7,7 @@ header {
 	right: 0;
 	z-index: 2;
 	background-color: black;
+	position: sticky;
 
 	h1 {
 		font-size: 2rem;
@@ -22,7 +23,6 @@ header {
 		padding-left: 1rem;
 		&:hover {
 			color: $accent-color;
-			// text-shadow: none;
 		}
 	}
 
@@ -39,6 +39,7 @@ header {
 	}
 }
 
+// Hamburger menu
 .site-navigation {
 	ul {
 		display: none;
