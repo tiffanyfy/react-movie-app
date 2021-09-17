@@ -38,8 +38,6 @@ function PageSingleMovie() {
         <div>
             {/* if movieData does have information, display SingleMovie */}
             {movieData !== null && <SingleMovie movieObj = {movieData} />}
-            
-            
         </div>
     )
 }
