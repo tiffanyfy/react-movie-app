@@ -7,11 +7,7 @@ $font-color: #ffffff;
 
 // Font Variables
 $main-font: 'Roboto', sans-serif;
-$font-size: (
-	mobile: 0.75rem,
-	tablet: 0.875rem,
-	desktop: 1rem,
-);
+
 $font-weight: (
 	thin: 300,
 	regular: 400,
@@ -22,11 +18,15 @@ $font-weight: (
 // Image Variables
 $movie-card-radius: 10px; // border radius for each movie card on home page
 
+// Button Variables
+$button-radius: 50px;
+
 // Media Query Breakpoints
 $breakpoint: (
 	mobile: 480px,
 	tablet-small: 640px,
 	tablet-large: 768px,
-	laptop: 1366px,
 	desktop: 1024px,
+	desktop-medium: 1366px,
+	desktop-large: 1920px
 );
