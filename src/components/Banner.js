@@ -15,10 +15,6 @@ function Banner( { movieObj, movieBannerLength } ) {
     let randomNum = Math.floor(Math.random() * movieBannerLength);
 
     let movieDisplayed = movieObj && movieObj[randomNum];
-   
-    // console.log(movieDisplayed && movieDisplayed.overview);
-
-    // console.log(randomVar);
 
 
 

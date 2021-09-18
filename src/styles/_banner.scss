@@ -67,7 +67,8 @@
 
 				@media (min-width: map-get($breakpoint, desktop)) {
 					-webkit-line-clamp: 4;
-					max-width: map-get($breakpoint, desktop);
+					max-width: 80%;
+					// max-width: map-get($breakpoint, desktop);
 					font-size: 1.125rem;
 				}
 			}
