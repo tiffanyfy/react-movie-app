@@ -53,11 +53,17 @@
 			}
 
 			@media (min-width: map-get($breakpoint, tablet-small)) {
-				font-size: 2rem;
+				font-size: 1.5rem;
 			}
 
 			@media (min-width: map-get($breakpoint, tablet-large)) {
-				font-size: 1.75rem;
+				margin-bottom: 1.5rem;
+				font-size: 1.25rem;
+			}
+
+			@media (min-width: map-get($breakpoint, desktop)) {
+				margin-bottom: 1rem;
+				font-size: 1.125rem;
 			}
 		}
 
@@ -72,11 +78,12 @@
 			}
 
 			@media (min-width: map-get($breakpoint, tablet-small)) {
-				font-size: 1.5rem;
+				font-size: 1rem;
 			}
 
 			@media (min-width: map-get($breakpoint, tablet-large)) {
-				font-size: 1.25rem;
+				margin-bottom: 1rem;
+				font-size: 0.875rem;
 			}
 		}
 
@@ -96,6 +103,14 @@
 			@media (min-width: map-get($breakpoint, mobile)) {
 				margin-top: 0.5rem;
 			}
+
+			@media (min-width: map-get($breakpoint, tablet-large)) {
+				width: 70px;
+				padding: 0.5rem 1rem;
+				margin-top: 0;
+				margin-bottom: 1rem;
+				font-size: 0.875rem;
+			}
 		}
 
 		div {
@@ -107,6 +122,10 @@
 				padding: 0 0 0 2rem;
 				width: 40px;
 				// should we position to top right corner?
+
+				@media (min-width: map-get($breakpoint, tablet-large)) {
+					width: 30px;
+				}
 			}
 		}
 
@@ -114,6 +133,10 @@
 			img{
 				padding: 0 0 0 2rem;
 				width: 40px;
+
+				@media (min-width: map-get($breakpoint, tablet-large)) {
+					width: 30px;
+				}
 			}
 		}
 
@@ -131,6 +154,10 @@
 			margin-bottom: 1.25rem;
 			display: flex;
 			align-items: center;
+
+			@media (min-width: map-get($breakpoint, tablet-large)) {
+				margin-bottom: 1rem;
+			}
 
 			img {
 				background-color: $font-color;
