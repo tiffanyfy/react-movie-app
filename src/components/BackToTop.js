@@ -17,8 +17,8 @@ const BackToTopButton = () => {
     >
       <div className="back-to-top-content">
         <img src={backtotopbtn} alt="back to top button" />
-        <img src={topBtn} alt="back to top button" />
-        <img src={topBtnOne} alt="back to top button" />
+        {/* <img src={topBtn} alt="back to top button" /> */}
+        {/* <img src={topBtnOne} alt="back to top button" /> */}
       </div>
     </div>
   );
