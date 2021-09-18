@@ -87,16 +87,16 @@ function PageHome({ sort }) {
             <Banner movieObj = {movieDataBanner} movieBannerLength = {movieBannerLength} />
             <NavSort />
             {movieData1 !== null && <Movies movieData={movieData1} />}
-            {(movieData1 !== null && movieData2 === null) && <button onClick={handleLoadMore}>Load More</button>}
+            {(movieData1 !== null && movieData2 === null) && <div className='load-more-btn-container'><button onClick={handleLoadMore} className='load-more-btn'>Load More</button></div>}
             
             {movieData2 !== null && <Movies movieData={movieData2} />}
-            {(movieData2 !== null && movieData3 === null) && <button onClick={handleLoadMore}>Load More</button> }
+            {(movieData2 !== null && movieData3 === null) && <div className='load-more-btn-container'><button onClick={handleLoadMore} className='load-more-btn'>Load More</button></div> }
         
             {movieData3 !== null && <Movies movieData={movieData3} />}
-            {(movieData3 !== null && movieData4 === null ) && <button onClick={handleLoadMore}>Load More</button>}
+            {(movieData3 !== null && movieData4 === null ) && <div className='load-more-btn-container'><button onClick={handleLoadMore} className='load-more-btn'>Load More</button></div>}
            
             {movieData4 !== null && <Movies movieData={movieData4} />}
-            {(movieData4 !== null && movieData5===null) && <button onClick={handleLoadMore}>Load More</button>}
+            {(movieData4 !== null && movieData5===null) && <div className='load-more-btn-container'><button onClick={handleLoadMore} className='load-more-btn'>Load More</button></div>}
          
             {movieData5 !== null && <Movies movieData={movieData5} />}
         </div>
