@@ -31,7 +31,7 @@
 			height: 0;
 
 			@media (min-width: map-get($breakpoint, desktop)) {
-				top: -16rem;
+				top: -20rem;
 			}
 
 			.banner-title {
@@ -40,8 +40,12 @@
 				margin-bottom: 1rem;
 				text-align: left;
 
-				@media (min-width: map-get($breakpoint, desktop)) {
+				@media(min-width: map-get($breakpoint, tablet-large)){
 					font-size: 1.75rem;
+				}
+
+				@media (min-width: map-get($breakpoint, desktop)) {
+					font-size: 1.9rem;
 				}
 
 			}
@@ -56,6 +60,10 @@
 				text-align: left;
 				text-overflow: ellipsis;
 				overflow: hidden;
+
+				@media(min-width: map-get($breakpoint, tablet-large)){
+					font-size: 1.2rem;
+				}
 
 				@media (min-width: map-get($breakpoint, desktop)) {
 					-webkit-line-clamp: 4;
@@ -76,6 +84,9 @@
 				box-shadow: 0px 3px 5px black;
 				position: absolute;
 				left: 0;
+				@media (min-width: map-get($breakpoint, desktop)) {
+					font-size: 1.4rem;
+				}
 			}
 		}
 	}
