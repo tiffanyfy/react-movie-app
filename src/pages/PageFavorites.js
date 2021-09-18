@@ -41,8 +41,9 @@ function PageFavs() {
     
     return (
         <div>
-            <h1>Fav Movies</h1>
-            <Movies movieData={movieObjArr} />
+            {/* if movieObjArr is empty ... */}
+            {movieObjArr === []? <h1>You have no favorite movies...</h1> : <Movies movieData={movieObjArr} />}
+            
         </div>
     )
 }
