@@ -29,9 +29,8 @@ function AppRouter() {
             </Switch>
           </main>
           <BackToTopButton />
-        
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }
