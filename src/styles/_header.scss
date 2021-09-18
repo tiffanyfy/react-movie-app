@@ -37,6 +37,17 @@ header {
 			margin-right: 1rem;
 		}
 	}
+
+	img{
+		width: 40px;
+		padding: 0 0.5rem;
+
+		@media (min-width: map-get($breakpoint, desktop)) {
+			width: 45px;
+			padding-left: 0.5rem;
+		}
+
+	}
 }
 
 // Hamburger menu
