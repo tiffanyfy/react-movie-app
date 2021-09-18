@@ -6,15 +6,22 @@
 
 	// Can switch media query breakpoint between tablet-small and tablet-small
 	// To see which looks better
-	@media (min-width: map-get($breakpoint, tablet-large)) {
+
+	@media (min-width: map-get($breakpoint, tablet-small)) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		// gap: 1rem;
 	}
 
+	@media (min-width: map-get($breakpoint, tablet-large)) {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		// gap: 1rem;
+	}
+
 	@media (min-width: map-get($breakpoint, desktop)) {
 		padding: 1rem;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		gap: 1rem;
 	}
 }
