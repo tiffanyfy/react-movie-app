@@ -15,11 +15,11 @@ function SingleMovie({ movieObj }) {
     function addFav() {
 
         if (favMovies.includes(movieObj.id)) {
-            let position = favMovies.indexOf(movieObj.id)
+            let position = favMovies.indexOf(movieObj)
             favMovies.splice(position, 1)
             localStorage.setItem("favMovies", JSON.stringify(favMovies))
         } else {
-            favMovies.push(movieObj.id);
+            favMovies.push(movieObj);
             localStorage.setItem("favMovies", JSON.stringify(favMovies))
         }
 
@@ -56,7 +56,7 @@ function SingleMovie({ movieObj }) {
     }
 
     const heartIcon = () => {
-        if (favMovies.includes(movieObj.id)) {
+        if (favMovies.includes(movieObj)) {
             console.log("faved")
             return (
                 <div className="remove-favorite" onClick={addFav}>
