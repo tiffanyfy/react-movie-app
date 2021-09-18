@@ -2,7 +2,7 @@
 
 .movies-container {
 	margin: 0 auto;
-	max-width: map-get($breakpoint, laptop); 
+	max-width: map-get($breakpoint, desktop-medium); 
 
 	@media (min-width: map-get($breakpoint, tablet-small)) {
 		display: grid;
@@ -43,7 +43,7 @@
 		font-size: 1rem;
 		font-weight: map-get($font-weight, semibold);
 		letter-spacing: 1px;
-		border-radius: 10px;
+		border-radius: $button-radius;
 		box-shadow: 0px 3px 5px black;
 		font-family: $main-font;
 		@media(min-width: map-get($breakpoint, mobile)){

@@ -7,7 +7,6 @@
 @media (min-width: map-get($breakpoint, tablet-large)) {
 	.banner-container {
 		display: block;
-		// border: 2px solid cyan; // comment this back in to see .banner-container overflow
 
 		img {
 			// top: 200px;
@@ -31,7 +30,7 @@
 			height: 0;
 
 			@media (min-width: map-get($breakpoint, desktop)) {
-				top: -20rem;
+				top: -16rem;
 			}
 
 			.banner-title {
@@ -40,7 +39,7 @@
 				margin-bottom: 1rem;
 				text-align: left;
 
-				@media(min-width: map-get($breakpoint, tablet-large)){
+				@media(min-width: map-get($breakpoint, tablet-large)) {
 					font-size: 1.75rem;
 				}
 
@@ -67,8 +66,13 @@
 
 				@media (min-width: map-get($breakpoint, desktop)) {
 					-webkit-line-clamp: 4;
-					max-width: 80%;
-					// max-width: map-get($breakpoint, desktop);
+					max-width: 60%;
+					font-size: 1.125rem;
+				}
+
+				@media (min-width: map-get($breakpoint, desktop-medium)) {
+					-webkit-line-clamp: 4;
+					max-width: 55%;
 					font-size: 1.125rem;
 				}
 			}
@@ -81,7 +85,7 @@
 				font-weight: map-get($font-weight, semibold);
 				letter-spacing: 1px;
 				text-decoration: none;
-				border-radius: 50px;
+				border-radius: $button-radius;
 				box-shadow: 0px 3px 5px black;
 				position: absolute;
 				left: 0;
