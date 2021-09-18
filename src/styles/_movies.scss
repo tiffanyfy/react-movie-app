@@ -2,10 +2,7 @@
 
 .movies-container {
 	margin: 0 auto;
-	max-width: 1080px;
-
-	// Can switch media query breakpoint between tablet-small and tablet-small
-	// To see which looks better
+	max-width: map-get($breakpoint, laptop); 
 
 	@media (min-width: map-get($breakpoint, tablet-small)) {
 		display: grid;
@@ -23,5 +20,62 @@
 		padding: 1rem;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 1rem;
+	}
+}
+
+.load-more-btn-container{
+	text-align: center;
+	@media(min-width: map-get($breakpoint, desktop)){
+		width: 80%;
+		font-size: 1.7rem;
+		margin: 0 auto;
+
+	}
+
+	.load-more-btn{
+		width: 80%;
+		margin: 2rem auto;
+		margin-bottom: 2rem;
+		background-color: $accent-color;
+		border: none;
+		color: $font-color;
+		padding: 0.5rem 2.5rem;
+		font-size: 1rem;
+		font-weight: map-get($font-weight, semibold);
+		letter-spacing: 1px;
+		border-radius: 10px;
+		box-shadow: 0px 3px 5px black;
+		font-family: $main-font;
+		@media(min-width: map-get($breakpoint, mobile)){
+			font-size: 1.2rem;
+		}
+		@media(min-width: map-get($breakpoint, tablet-small)){
+			font-size: 1.4rem;
+		}
+		@media(min-width: map-get($breakpoint, tablet-large)){
+			font-size: 1.4rem;
+		}
+		@media(min-width: map-get($breakpoint, desktop)){
+			font-size: 1.7rem;
+		}
+	}
+}
+
+// Back to top button
+
+.back-to-top-btn {
+	display: flex;
+	justify-content: flex-end;
+	padding-bottom: 1rem;
+	position: sticky;
+	bottom: 0;
+
+}
+
+.back-to-top-content {
+	img {
+		width: auto;
+		// background-color: black;
+		// border-radius: 20px;
 	}
 }
