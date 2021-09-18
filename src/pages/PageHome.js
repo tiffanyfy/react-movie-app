@@ -7,7 +7,13 @@ import { API_KEY, API_TOKEN } from '../globals/globals';
 
 function PageHome({ sort }) {
 
-    const [movieData, setMovieData] = useState(null);
+    const [movieData1, setMovieData1] = useState(null);
+    const [movieData2, setMovieData2] = useState(null);
+    const [movieData3, setMovieData3] = useState(null);
+    const [movieData4, setMovieData4] = useState(null);
+    const [movieData5, setMovieData5] = useState(null);
+
+    const [page, setPage] = useState(1)
 
     // variable for Banner
     const [movieDataBanner, setMovieDataBanner] = useState(null);
@@ -19,7 +25,7 @@ function PageHome({ sort }) {
         // using async since we need the data before load the page
         const fetchMovies = async() => {
             // fetch() - built in function
-            const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?&language=en-US&page=1`, {
+            const res = await fetch(`https://api.themoviedb.org/3/movie/${sort}?&language=en-US&page=${page}`, {
                 headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json',
@@ -33,11 +39,24 @@ function PageHome({ sort }) {
             rawMovieData = rawMovieData.results.splice(0, 12);
     
             // save the data returned into a variable 
-            setMovieData(rawMovieData);
+            
+
+            if(page === 1){
+                setMovieData1(rawMovieData);
+            }else if(page === 2) {
+                setMovieData2(rawMovieData);
+            } else if (page === 3 ){
+                setMovieData3(rawMovieData);
+            }else if(page === 4) {
+                setMovieData4(rawMovieData);
+            }else if(page === 5) {
+                setMovieData5(rawMovieData);
+            }
+
         }
 
         fetchMovies();
-    }, [sort]);
+    }, [sort, page]);
 
 
     // Banner
@@ -59,13 +78,27 @@ function PageHome({ sort }) {
         await fetchPopularMovies();
     }, []);
 
-
+    function handleLoadMore(){
+        setPage(page + 1);
+    }
 
     return (
         <div>
             <Banner movieObj = {movieDataBanner} movieBannerLength = {movieBannerLength} />
             <NavSort />
-            {movieData !== null && <Movies movieData={movieData} />}
+            {movieData1 !== null && <Movies movieData={movieData1} />}
+            {(movieData1 !== null && movieData2 === null) && <button onClick={handleLoadMore}>Load More</button>}
+            
+            {movieData2 !== null && <Movies movieData={movieData2} />}
+            {(movieData2 !== null && movieData3 === null) && <button onClick={handleLoadMore}>Load More</button> }
+        
+            {movieData3 !== null && <Movies movieData={movieData3} />}
+            {(movieData3 !== null && movieData4 === null ) && <button onClick={handleLoadMore}>Load More</button>}
+           
+            {movieData4 !== null && <Movies movieData={movieData4} />}
+            {(movieData4 !== null && movieData5===null) && <button onClick={handleLoadMore}>Load More</button>}
+         
+            {movieData5 !== null && <Movies movieData={movieData5} />}
         </div>
 
         
