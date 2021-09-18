@@ -44,18 +44,10 @@
     img{
         display: block;
         margin: 0 auto;
-        margin-top: 1rem;
+        margin-top: 2rem;
         width: 60%;
         @media(min-width: map-get($breakpoint, tablet-small)){
             width: 50%;
         }
     }
 }
-
-
-$breakpoint: (
-	mobile: 480px,
-	tablet-small: 640px,
-	tablet-large: 768px,
-	desktop: 1024px,
-);
