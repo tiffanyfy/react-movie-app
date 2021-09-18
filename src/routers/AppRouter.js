@@ -7,6 +7,7 @@ import PageAbout from '../pages/PageAbout';
 import PageFavorites from '../pages/PageFavorites';
 import PageSingleMovie from '../pages/PageSingleMovie';
 import ScrollToTop from '../components/ScrollToTop';
+import BackToTopButton from '../components/BackToTop';
 
 function AppRouter() {
   return (
@@ -27,8 +28,10 @@ function AppRouter() {
               <Route path="/movie/:id"><PageSingleMovie /></Route>
             </Switch>
           </main>
-        <Footer />
+          <BackToTopButton />
+        
       </div>
+      <Footer />
     </Router>
   );
 }
