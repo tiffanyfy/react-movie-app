@@ -14,7 +14,6 @@ header {
 		font-weight: map-get($font-weight, bold);
 		font-style: italic;
 		text-transform: uppercase;
-		// text-shadow: 2px 2px 2px $accent-color;
 	}
 
 	a {
@@ -38,7 +37,7 @@ header {
 		}
 	}
 
-	img{
+	img {
 		width: 40px;
 		padding: 0 0.5rem;
 
@@ -46,7 +45,6 @@ header {
 			width: 45px;
 			padding-left: 0.5rem;
 		}
-
 	}
 }
 

@@ -1,15 +1,41 @@
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-// import Hamburger from 'hamburger-react';
 
 function NavMain() {
+
+
+    const [expanded, setExpanded] = useState(false);
+
+    function expandedTrue(){
+        setExpanded(true);
+        console.log(expanded);
+    }
+
+    function expandedFalse(){
+        setExpanded(false);
+        console.log(expanded);
+    }
+
+    const [toggled, setToggled] = useState(false);
+    const [toggleText, setToggleText] = useState(null);
+
+    function toggledTrue(){
+        setToggled(true);
+        setToggleText("toggled");
+        console.log(toggled);
+    }
+    function toggledFalse(){
+        setToggled(false);
+        console.log(toggled);
+        setToggleText(null);
+
+    }
     
 
     return (
-        <nav className="site-navigation" id="site-navigation">
-            {/* <Hamburger toggled={isOpen} toggle={setOpen} /> */}
+        <nav className={`site-navigation ${ toggleText } `} id="site-navigation">
 
-            <button class="menu-toggle" aria-controls="header-menu" aria-expanded="false" >
+            <button onClick={expanded !== true && toggled !== true && toggleText === null ? expandedTrue && toggledTrue : expandedFalse && toggledFalse} class="menu-toggle" aria-controls="header-menu" aria-expanded={expanded} >
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
                     <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"></path>
                 </svg>
@@ -17,13 +43,13 @@ function NavMain() {
 
             <ul class="nav-menu" id="header-menu">
                 <li>
-                    <NavLink to="/" exact>Home</NavLink>
+                    <NavLink onClick={expandedFalse && toggledFalse} to="/" exact>Home</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about">About</NavLink>
+                    <NavLink onClick={expandedFalse && toggledFalse} to="/about">About</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/favorites">Favorites</NavLink>
+                    <NavLink onClick={expandedFalse && toggledFalse} to="/favorites">Favorites</NavLink>
                 </li>
             </ul>
 

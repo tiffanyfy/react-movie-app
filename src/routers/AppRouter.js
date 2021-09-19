@@ -16,7 +16,6 @@ function AppRouter() {
       <div className="wrapper">
         <Header />
           <main>
-            {/* <Banner /> */}
             <Switch>
               <Route path="/" exact><PageHome sort='popular' /></Route>
               <Route path="/sort/popular"><PageHome sort='popular' /></Route>

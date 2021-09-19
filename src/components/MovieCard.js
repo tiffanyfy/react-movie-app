@@ -4,68 +4,48 @@ import noPoster from '../images/no-movie-poster.jpg';
 import addFavorite from '../images/add-favorite.png';
 import removeFavorite from '../images/remove-favorite.png';
 import { NavLink } from 'react-router-dom';
-import { favMovies } from '../globals/globals';
 import thumbup from '../images/thumbup.svg';
 import thumbdown from '../images/thumbdown.svg';
 
 function MovieCard({ movieObj }) {
 
     const [fav, setFav] = useState(false)
-    console.log(favMovies)
-    
+    // if movie not found in localstorage in favorites page then push movie into it
     function addFav() {
-
-        if (favMovies.includes(movieObj)) {
-            let position = favMovies.indexOf(movieObj)
-            favMovies.splice(position, 1)
-            localStorage.setItem("favMovies", JSON.stringify(favMovies))
+        let favourites = JSON.parse(localStorage.getItem("favMovies"));
+        if (favourites.find(m => m.title == movieObj.title) != null) {
+            const index = favourites.findIndex((movie) => movie.id == movieObj.id);
+            if ( index > -1) {
+                console.log("found")
+                favourites.splice(index, 1);
+                localStorage.setItem("favMovies", JSON.stringify(favourites));
+            }
         } else {
-            favMovies.push(movieObj);
-            localStorage.setItem("favMovies", JSON.stringify(favMovies))
+            favourites.push(movieObj);
+            localStorage.setItem("favMovies", JSON.stringify(favourites))
         }
 
         setFav(JSON.parse(localStorage.getItem("favMovies")))
         console.log(JSON.parse(localStorage.getItem("favMovies")))
         
-        // if (localStorage.getItem("favMovies") !== null) {
-        //     let favMovies = []
-        // } else {
-
-        //     if (favMovies.includes(movieObj.id)) {
-        //         let pos = favMovies.indexOf(movieObj.id)
-        //         favMovies.splice(pos, 1)
-        //         localStorage.setItem("favMovies", JSON.stringify(favMovies))
-        //     }
-        //     // Pull existing array (favorite movies) from localStorage
-        //     // bc local storage only stores strings
-        //     let stringData = localStorage.getItem("favMovies")
-        //     // Parse converts strings into og data type -> taking string and converting into an array
-        //     let favMovies = JSON.parse(stringData)
-        // }
-        // // TO DO:
-        // // If id already exists, remove from array
-
-        
-        // // Add movie to array
-        // favMovies.push(movieObj.id)
-        // // Save to localStorage
-        // // Stringify converts array into string
-        // // SetItem to save
-        // localStorage.setItem("favMovies", JSON.stringify(favMovies))
-
-        
     }
 
+
+    
+
     const heartIcon = () => {
-        if (favMovies.includes(movieObj)) {
-            console.log("faved")
+        let favs = JSON.parse(localStorage.getItem("favMovies"));
+
+        // if (JSON.parse(localStorage.getItem("favMovies")).includes(movieObj)) {
+        if (favs.find(m => m.title == movieObj.title) != null) {
+            // console.log("faved")
             return (
                 <div className="remove-favorite" onClick={addFav}>
                     <img src={removeFavorite} alt="Unfavorite icon" />
                 </div>
             )
         } else {
-            console.log("unfaved")
+            // console.log("unfaved");
             return (
                 <div className="add-favorite" onClick={addFav}>
                     <img src={addFavorite} alt="Favorite icon" />
@@ -74,12 +54,7 @@ function MovieCard({ movieObj }) {
         }
     }
 
-{/* <div className="add-favorite" onClick={addFav}>
-    <img src={addFavorite} alt="Favorite icon" />
-</div>
-<div className="remove-favorite">
-    <img src={removeFavorite} alt="Unfavorite icon" />
-</div> */}
+
 
     return (
         <div className="movie-card">
@@ -94,11 +69,10 @@ function MovieCard({ movieObj }) {
             <div className="movie-info">
                 <h3>{movieObj.title}</h3>
                 <p>{movieObj.release_date}</p>
-                {/* <p>Rating: {movieObj.vote_average}</p> */}
                 <div className="movie-rating">
-                            <img src={movieObj.vote_average>5.0? thumbup : thumbdown} alt="rate Icon" id="movie-rating-icon" />
-                            <p>{(movieObj.vote_average)*10}%</p>
-                        </div>
+                    <img src={movieObj.vote_average>5.0? thumbup : thumbdown} alt="rate Icon" id="movie-rating-icon" />
+                    <p>{(movieObj.vote_average)*10}%</p>
+                </div>
                 <p className="overview">{movieObj.overview}</p>
                 <Link to={`/movie/${movieObj.id}`}>More Info</Link>
                 <div>{heartIcon()}</div>

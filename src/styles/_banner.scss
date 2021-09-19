@@ -9,15 +9,10 @@
 		display: block;
 
 		img {
-			// top: 200px;
-			// position: absolute;
 			display: block;
 			width: 100%;
-			// height: 100%;
 			object-fit: cover;
-			// object-position: 75%;
 			filter: brightness(40%);
-			// border: 1px solid red;
 		}
 
 		.banner-info-container {
@@ -39,14 +34,13 @@
 				margin-bottom: 1rem;
 				text-align: left;
 
-				@media(min-width: map-get($breakpoint, tablet-large)) {
+				@media (min-width: map-get($breakpoint, tablet-large)) {
 					font-size: 1.75rem;
 				}
 
 				@media (min-width: map-get($breakpoint, desktop)) {
 					font-size: 1.9rem;
 				}
-
 			}
 
 			.banner-overview {
@@ -60,7 +54,7 @@
 				text-overflow: ellipsis;
 				overflow: hidden;
 
-				@media(min-width: map-get($breakpoint, tablet-large)){
+				@media (min-width: map-get($breakpoint, tablet-large)) {
 					font-size: 1.2rem;
 				}
 
@@ -96,65 +90,3 @@
 		}
 	}
 }
-
-// @media (min-width: map-get($breakpoint, tablet-small)) {
-// 	.banner-info-container {
-// 		.banner-overview {
-
-// 			// margin: 0 auto;
-// 			// margin-bottom: 2rem;
-// 			text-overflow: ellipsis;
-// 			overflow: hidden;
-// 			display: -webkit-box;
-// 			// -webkit-line-clamp: 4;
-// 		}
-// 	}
-// }
-
-// @media (min-width: map-get($breakpoint, desktop)) {
-// 	// .banner-container {
-// 	// 	// margin-top: 0.5rem;
-// 	// 	top: -15rem;
-// 	// }
-// 	.banner-info-container {
-// 		text-align: left;
-// 		h2 {
-// 			margin-left: 6rem;
-// 		}
-// 		.banner-overview {
-// 			max-width: 50%;
-// 			margin-left: 6rem;
-// 		}
-// 		#banner-watch-now-btn {
-// 			margin-left: 6rem;
-// 		}
-// 	}
-// }
-
-// @media(min-width: 1500px){
-//     .banner-container img {
-//         width: 100%;
-//         height: 500px;
-//         object-position: 100% 20%;
-
-//     }
-
-// }
-
-// @media (min-width: 1780px) {
-// 	.banner-info-container {
-// 		h2 {
-// 			margin-left: 10rem;
-// 			font-size: 2.4rem;
-// 		}
-// 		.banner-overview {
-// 			margin-left: 10rem;
-// 			font-size: 1.2rem;
-// 		}
-// 		#banner-watch-now-btn {
-// 			margin-left: 10rem;
-// 			font-size: 1.2rem;
-// 			padding: 0.7rem 2.2rem;
-// 		}
-// 	}
-// }
