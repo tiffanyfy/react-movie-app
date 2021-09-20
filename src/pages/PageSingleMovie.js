@@ -1,7 +1,8 @@
 import { useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
-import SingleMovie from '../components/SingleMovie';
 import { API_TOKEN } from '../globals/globals';
+import SingleMovie from '../components/SingleMovie';
+
 
 function PageSingleMovie() {
 

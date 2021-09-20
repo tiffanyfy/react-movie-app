@@ -33,7 +33,7 @@ function NavMain() {
     
 
     return (
-        <nav className={`site-navigation ${ toggleText } `} id="site-navigation">
+        <nav className={`site-navigation ${ toggleText }`} id="site-navigation">
 
             <button onClick={expanded !== true && toggled !== true && toggleText === null ? expandedTrue && toggledTrue : expandedFalse && toggledFalse} class="menu-toggle" aria-controls="header-menu" aria-expanded={expanded} >
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">

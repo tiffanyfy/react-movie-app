@@ -1,7 +1,5 @@
 import React from "react";
-import backtotopbtn from "../images/up.png";
-import topBtn from "../images/top-btn.png";
-import topBtnOne from "../images/top-btn-one.png";
+// import backtotopbtn from "../images/back-to-top.png";
 
 const BackToTopButton = () => {
   const scrollToTop = () => {
@@ -16,9 +14,8 @@ const BackToTopButton = () => {
       id="scroll-to-top-btn"
     >
       <div className="back-to-top-content">
-        <img src={backtotopbtn} alt="back to top button" />
-        {/* <img src={topBtn} alt="back to top button" /> */}
-        {/* <img src={topBtnOne} alt="back to top button" /> */}
+        {/* <img src={backtotopbtn} alt="back to top button" /> */}
+        <i class="arrow-up"></i>
       </div>
     </div>
   );

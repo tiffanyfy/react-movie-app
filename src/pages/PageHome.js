@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
+import { API_KEY, API_TOKEN } from '../globals/globals';
 import NavSort from '../components/NavSort';
 import Movies from '../components/Movies';
 import Banner from '../components/Banner';
-import { API_KEY, API_TOKEN } from '../globals/globals';
 
 
 function PageHome({ sort }) {
