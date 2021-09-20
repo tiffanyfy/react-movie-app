@@ -62,7 +62,7 @@ function SingleMovie({ movieObj }) {
 
     return (
         <div className="single-movie" style={{backgroundImage: movieObj.backdrop_path && `url(https://image.tmdb.org/t/p/original/${movieObj.backdrop_path})`}}>
-            <div className="single-movie-background-image" ></div>
+            {/* <div className="single-movie-background-image" ></div> */}
 
             {/* reference page for the path */}
             {/* https://developers.themoviedb.org/3/getting-started/images */}

@@ -4,6 +4,7 @@
 	#single-movie-poster {
 		display: block;
 		max-width: 100%;
+		border-radius: $movie-card-radius;
 	}
 	.single-movie-info-header {
 		display: flex;
